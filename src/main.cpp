@@ -139,7 +139,7 @@ void setup() {
   SPIFFS.begin();
   File f = SPIFFS.open("/settings.json", "r");
   if (!f) {
-     Serial.println("loading settings failed");
+     Serial.println("Loading settings failed! Either the SPIFFS filesystem was not flashed or something went horribly wrong.");
   }else {
     String jdata = f.readString();
     settings = JsonToSettings(jdata);
