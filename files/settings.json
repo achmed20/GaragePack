@@ -1,0 +1,1 @@
+{"doorDistanceOpen":20,"doorDistanceClosed":180,"doorTimeToggle":20,"relayMode":500,"hasPIR":false,"wifiSSID":"","wifiPassword":"","wifiHostname":"GaragePack","mqttHost":"","mqttLogin":"","mqttPassword":"","runSetup":true, "restartAfterWifiError": 120}

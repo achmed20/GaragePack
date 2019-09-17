@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Achmeds Garage</title>
+        <link href="assets/css/main.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="assets/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="nav-settings"></div>
+
+        <div class="container" id="default">
+            <h1>GaragePack</h1>
+            <div class="garage-status garage-closed" style="display:none;">
+                <div class="text">Closed</div>
+                <div class="text update">Opening</div>
+                <div class="subtext car car-present">car parked</div>
+                <div class="subtext car car-notpresent">no car</div>
+            </div>
+
+            <div class="garage-status garage-open" style="display:none;">
+                <div class="text">Open</div>
+                <div class="text update">Closing</div>
+                <div class="subtext">12.12.2019 11:32</div>
+            </div>
+
+        </div>
+        <div class="container hide" id="settings">
+            <h1>GaragePack - Settings</h1>
+
+            <h3>General settings</h3>
+            <div class="setting">
+                <label>Distance Opened</label>
+                <div class="suffix">cm</div>
+                <input type="number" required id="doorDistanceOpen" value="" placeholder="20">
+                <p>This is the value when the door is UP and basicly blocking the sensor.</p>
+            </div>
+            <div class="setting">
+                <label>Distance closed</label>
+                <div class="suffix">cm</div>
+                <input type="number" required id="doorDistanceClosed" value="" placeholder="150">
+                <p>This is the value when the door is close and the sensor has a free view to the ground.</p>
+            </div>
+            <!-- <div class="setting">
+                <label>Open/Close time</label>
+                <div class="suffix">s</div>
+                <input type="number" id="doorTimeToggle" value="20">
+                <p>How many seconds does the door need to open / close</p>
+            </div> -->
+            <div class="setting">
+                <label>Relay mode</label>
+                <div class="suffix">ms</div>
+                <input type="number" required id="relayMode" value="500" placeholder="500">
+                <p>"0" means the relay is going to be either "on" or "off". Everything higher then 0, will make the relay go into a pulse mode, behaving like a normal push button and having its ON state for the given ms.</p>
+            </div>
+            <div class="setting">
+                <label>Motion Detector</label>
+                <input type="checkbox" id="hasPIR" value="true">
+                <p>check if a PIR is connected</p>
+            </div>
+
+            <h3>WiFi</h3>
+            <div class="setting">
+                <label>SSID</label>
+                <input type="text" id="wifiSSID" value="testnetwork" placeholder="">
+            </div>
+            <div class="setting">
+                    <label>Password</label>
+                    <input type="password" id="wifiPassword" value="">
+                </div>
+            <div class="setting">
+                <label>Hostname</label>
+                <input type="text" required id="wifiHostname" value="" placeholder="ESP123214">
+                <p>The DNS name under which your Garagapack will be available</p>
+            </div>
+                        
+
+            <h3>MQTT</h3>
+            <div class="setting">
+                    <label>Server</label>
+                <input type="text" id="mqttHost" value="192.168.1.2:1883" placeholder="">
+            </div>
+            <div class="setting">
+                <label>Login</label>
+                <input type="text" id="mqttLogin" value="">
+            </div>
+            <div class="setting">
+                <label>Password</label>
+                <input type="password" id="mqttPassword" value="">
+            </div>
+            
+            <button id="save">Save</button>
+            <button class="noborder" id="cancel">Cancel</button>
+            
+            <button class="" id="restart">Restart</button>
+
+        </div>
+        
+    </body>
+</html>
