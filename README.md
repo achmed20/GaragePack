@@ -1,5 +1,6 @@
 # GaragePack
 This is the firmware for a Garagedoor Opener which can be controled via Web or MQTT.
+It uses a relay to trigger the Door switch, Ultrasonic sensor to figure out if the door is open/closed and if a car is parked beneath it and the optional PIR could be used as automatic lightswitch trigger or simple alarm sensor.
 
 Parts i used:
 * Wemos D1 mini
@@ -38,7 +39,7 @@ Thats pretty much it. If you click monitor now, you should be able to see some i
 
 # Usage
 
-Test this before you mount it. The door (pulse) switch should go to the to right screw terminals. If you have a Toggle switch, you might need all 3 screw terminals.
+Test this before you mount it. The door (pulse) switch should go to the to left screw terminals. If you have a Toggle switch, you might need all 3 screw terminals.
 
 Once tested, you need to mount it above your Garagedoor, so that the ultrasonic sensor is blocked, once the door is open.
 
